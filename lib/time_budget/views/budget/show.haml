@@ -1,0 +1,167 @@
+!!!
+/[if lt IE 7] <html class="no-js ie6 oldie" lang="en">
+/[if IE 7] <html class="no-js ie7 oldie" lang="en">
+/[if IE 8] <html class="no-js ie8 oldie" lang="en">
+<!--[if (gt IE 8)]><html lang="en" class="no-js"><![endif]-->
+
+%head
+  %meta{charset: "utf-8"}
+  %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+  %title Time Budget
+  %meta{content: "width=device-width,initial-scale=1", name: "viewport"}
+  
+  :css
+    p, h1, h2, h3, h4, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+    
+    html, body {
+      height: 100%;
+    }
+    
+    #masthead {
+      background-color: #CCC;
+      margin-bottom: 10px;
+      padding: 20px;
+    }
+    
+    #content {
+      height: 648px;
+    }
+    
+    .week {
+      height: 648px;
+      overflow: hidden;
+    }
+    
+    .day {
+      background-color: #CCC;
+      float: left;
+      height: 648px;
+      margin-right: 0.3%;
+      padding: 5px;
+      width: 10.8%;
+    }
+    
+    .current {
+      width: 28%
+    }
+    
+    .time_block {
+      background-color: #FFF;
+      font-size: 0.75em;
+      margin: 1px 0;
+      padding: 3px;
+    }
+    
+    .hours_8 { height: 200px; }
+
+%body
+  %section#content
+    
+    %section#week
+      %section#sunday.day
+        %p Sunday
+        
+        %div.time_block.hours_8
+          Sleep - 8 hrs
+          
+        %div.time_block{:style => "height: 37.5px"}
+          Lunch - 1.5 hrs
+        
+        %div.time_block{:style => "height: 37.5px"}
+          Dinner - 1.5 hrs
+
+      %section#monday.day
+        %p Monday
+        
+        %div.time_block.hours_8
+          Sleep - 8 hrs
+          
+        %div.time_block.hours_8
+          Work - 8 hrs
+          
+        %div.time_block{:style => "height: 37.5px"}
+          Lunch - 1.5 hrs
+
+        %div.time_block{:style => "height: 37.5px"}
+          Dinner - 1.5 hrs
+
+      %section#tuesday.day
+        %p Tuesday
+        
+        %div.time_block.hours_8
+          Sleep - 8 hrs
+        
+        %div.time_block.hours_8
+          Work - 8 hrs
+        
+        %div.time_block{:style => "height: 37.5px"}
+          Lunch - 1.5 hrs
+
+        %div.time_block{:style => "height: 37.5px"}
+          Dinner - 1.5 hrs
+        
+
+      %section#wednesday.day
+        %p Wednesday
+        
+        %div.time_block.hours_8
+          Sleep - 8 hrs
+        
+        %div.time_block.hours_8
+          Work - 8 hrs
+          
+        %div.time_block{:style => "height: 37.5px"}
+          Lunch - 1.5 hrs
+
+        %div.time_block{:style => "height: 37.5px"}
+          Dinner - 1.5 hrs
+
+      %section#thursday.day
+        %p Thursday
+        
+        %div.time_block.hours_8
+          Sleep - 8 hrs
+          
+        %div.time_block.hours_8
+          Work - 8 hrs
+          
+        %div.time_block{:style => "height: 37.5px"}
+          Lunch - 1.5 hrs
+
+        %div.time_block{:style => "height: 37.5px"}
+          Dinner - 1.5 hrs
+
+      %section#friday.day.current
+        %p Friday
+        
+        %div.time_block.hours_8
+          Sleep - 8 hrs
+          
+        %div.time_block.hours_8
+          Work - 8 hrs
+          
+        %div.time_block{:style => "height: 37.5px"}
+          Lunch - 1.5 hrs
+
+        %div.time_block{:style => "height: 37.5px"}
+          Dinner - 1.5 hrs
+
+      %section#saturday.day
+        %p Saturday
+        
+        %div.time_block.hours_8
+          Sleep - 8 hrs
+          
+        %div.time_block{:style => "height: 32.5px"}
+          Fiddle 1 - 1.3 hours
+          
+        %div.time_block{:style => "height: 37.5px"}
+          Lunch - 1.5 hrs
+
+        %div.time_block{:style => "height: 37.5px"}
+          Dinner - 1.5 hrs
+
+</html>
