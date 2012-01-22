@@ -21,63 +21,19 @@
 
   %section#content
     %section.container.container_4
-      - sunday_activities = [                                      |
-        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
-        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
-        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
-      ]                                                           |
-      = haml :"budget/day", locals: {name: "Sunday", activities: sunday_activities}
+      = haml :"budget/day", locals: {day: sunday}
+      = haml :"budget/day", locals: {day: monday}
+      = haml :"budget/day", locals: {day: tuesday}
+      = haml :"budget/day", locals: {day: wednesday}
       
-      - monday_activities = [                                      |
-        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
-        OpenStruct.new(name: "Work", hours_and_minutes: "8" ),     |
-        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
-        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
-      ]                                                           |
-      = haml :"budget/day", locals: {name: "Monday", activities: monday_activities}
-
-      - tuesday_activities = [                                     |
-        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
-        OpenStruct.new(name: "Work", hours_and_minutes: "8" ),     |
-        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
-        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
-      ]                                                           |
-      = haml :"budget/day", locals: {name: "Tuesday", activities: tuesday_activities}
-        
-      - wednesday_activities = [                                   |
-        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
-        OpenStruct.new(name: "Work", hours_and_minutes: "8" ),     |
-        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
-        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
-      ]                                                           |
-      = haml :"budget/day", locals: {name: "Wednesday", activities: wednesday_activities}
-          
-      .clear{style: "margin-bottom: 4%;"} &nbsp;
-
-      - thursday_activities = [                                    |
-        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
-        OpenStruct.new(name: "Work", hours_and_minutes: "8" ),     |
-        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
-        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
-      ]                                                           |
-      = haml :"budget/day", locals: {name: "Thursday", activities: thursday_activities}
-
-      - friday_activities = [                                      |
-        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
-        OpenStruct.new(name: "Work", hours_and_minutes: "8" ),     |
-        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
-        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
-      ]                                                           |
-      = haml :"budget/day", locals: {name: "Friday", activities: friday_activities}
-
-      - saturday_activities = [                                           |
-        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),            |
-        OpenStruct.new(name: "Fiddle 1", hours_and_minutes: "1:20" ),     |
-        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ),        |
-        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" )        |
-      ]                                                           |
-      = haml :"budget/day", locals: {name: "Saturday", activities: saturday_activities}
-          
+      %div.clear{style: "margin-bottom: 4%"} &nbsp;
+      
+      = haml :"budget/day", locals: {day: thursday}
+      = haml :"budget/day", locals: {day: friday}
+      = haml :"budget/day", locals: {day: saturday}
+      
       %section#something.grid_1
+      
+      %div.clear &nbsp;
 
 </html>
