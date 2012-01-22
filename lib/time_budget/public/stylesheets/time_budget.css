@@ -1,0 +1,42 @@
+p, h1, h2, h3, h4, ul, li {
+  margin: 0;
+  padding: 0;
+}
+    
+#masthead {
+  margin-bottom: 10px;
+}
+    
+.day {
+  background-color: #CCC;
+  height: 300px;
+}
+
+.day > p {
+  margin: 10px;
+}
+    
+ul.time_list {
+  list-style: none;
+  margin: 0 10px;
+}
+
+ul.time_list li {
+  background-color: #FFF;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+ul.time_list li span {
+  border-left: 1px dashed #CCC;
+  display: block;
+  float: right;
+  text-align: center;
+  width: 30px;
+}
+
+.time_block {
+  background-color: #FFF;
+  margin: 1px 10px;
+  padding: 3px;
+}
