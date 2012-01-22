@@ -64,124 +64,62 @@
 
   %section#content
     %section#week.container.container_4
-      %section#sunday.day.grid_1
-        %p Sunday
-        
-        %ul.time_list
-          %li
-            Sleep
-            %span 8
-          %li
-            Lunch
-            %span 1:30
-          %li
-            Dinner
-            %span 1:30
+      - sunday_activities = [                                      |
+        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
+        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
+        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
+      ]                                                           |
+      = haml :"budget/day", locals: {dom_id: "sunday", name: "Sunday", activities: sunday_activities}
+      
+      - monday_activities = [                                      |
+        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
+        OpenStruct.new(name: "Work", hours_and_minutes: "8" ),     |
+        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
+        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
+      ]                                                           |
+      = haml :"budget/day", locals: {dom_id: "monday", name: "Monday", activities: monday_activities}
 
-      %section#monday.day.grid_1
-        %p Monday
+      - tuesday_activities = [                                     |
+        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
+        OpenStruct.new(name: "Work", hours_and_minutes: "8" ),     |
+        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
+        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
+      ]                                                           |
+      = haml :"budget/day", locals: {dom_id: "tuesday", name: "Tuesday", activities: tuesday_activities}
         
-        %ul.time_list
-          %li
-            Sleep
-            %span 8
-          %li
-            Work
-            %span 8
-          %li
-            Lunch
-            %span 1:30
-          %li
-            Dinner
-            %span 1:30
-
-      %section#tuesday.day.grid_1
-        %p Tuesday
-        
-        %ul.time_list
-          %li
-            Sleep
-            %span 8
-          %li
-            Work
-            %span 8
-          %li
-            Lunch
-            %span 1:30
-          %li
-            Dinner
-            %span 1:30
-        
-
-      %section#wednesday.day.grid_1
-        %p Wednesday
-        
-        %ul.time_list
-          %li
-            Sleep
-            %span 8
-          %li
-            Work
-            %span 8
-          %li
-            Lunch
-            %span 1:30
-          %li
-            Dinner
-            %span 1:30
+      - wednesday_activities = [                                   |
+        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
+        OpenStruct.new(name: "Work", hours_and_minutes: "8" ),     |
+        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
+        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
+      ]                                                           |
+      = haml :"budget/day", locals: {dom_id: "wednesday", name: "Wednesday", activities: wednesday_activities}
           
       .clear{style: "margin-bottom: 4%;"} &nbsp;
 
-      %section#thursday.day.grid_1
-        %p Thursday
-        
-        %ul.time_list
-          %li
-            Sleep
-            %span 8
-          %li
-            Work
-            %span 8
-          %li
-            Lunch
-            %span 1:30
-          %li
-            Dinner
-            %span 1:30
+      - thursday_activities = [                                    |
+        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
+        OpenStruct.new(name: "Work", hours_and_minutes: "8" ),     |
+        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
+        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
+      ]                                                           |
+      = haml :"budget/day", locals: {dom_id: "thursday", name: "Thursday", activities: thursday_activities}
 
-      %section#friday.day.grid_1
-        %p Friday
-        
-        %ul.time_list
-          %li
-            Sleep
-            %span 8
-          %li
-            Work
-            %span 8
-          %li
-            Lunch
-            %span 1:30
-          %li
-            Dinner
-            %span 1:30
+      - friday_activities = [                                      |
+        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),     |
+        OpenStruct.new(name: "Work", hours_and_minutes: "8" ),     |
+        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ), |
+        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" ) |
+      ]                                                           |
+      = haml :"budget/day", locals: {dom_id: "friday", name: "Friday", activities: friday_activities}
 
-      %section#saturday.day.grid_1
-        %p Saturday
-        
-        %ul.time_list
-          %li
-            Sleep
-            %span 8
-          %li
-            Fiddle 1
-            %span 1:20
-          %li
-            Lunch
-            %span 1:30
-          %li
-            Dinner
-            %span 1:30
+      - saturday_activities = [                                           |
+        OpenStruct.new(name: "Sleep", hours_and_minutes: "8"),            |
+        OpenStruct.new(name: "Fiddle 1", hours_and_minutes: "1:20" ),     |
+        OpenStruct.new(name: "Lunch", hours_and_minutes: "1:30" ),        |
+        OpenStruct.new(name: "Dinner", hours_and_minutes: "1:30" )        |
+      ]                                                           |
+      = haml :"budget/day", locals: {dom_id: "saturday", name: "Saturday", activities: saturday_activities}
           
       %section#something.grid_1
 

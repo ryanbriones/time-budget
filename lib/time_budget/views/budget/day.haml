@@ -1,0 +1,8 @@
+%section.day.grid_1{id: dom_id}
+  %p= name
+  
+  %ul.time_list
+    - activities.each do |activity|
+      %li
+        = activity.name
+        %span= activity.hours_and_minutes
