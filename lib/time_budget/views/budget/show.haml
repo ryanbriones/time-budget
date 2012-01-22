@@ -10,158 +10,179 @@
   %title Time Budget
   %meta{content: "width=device-width,initial-scale=1", name: "viewport"}
   
+  %link{rel: "stylesheet", type: "text/css", href: "/stylesheets/fluid_grid.css"}
+  
   :css
     p, h1, h2, h3, h4, ul, li {
       margin: 0;
       padding: 0;
     }
-    
-    html, body {
-      height: 100%;
-    }
-    
+        
     #masthead {
-      background-color: #CCC;
       margin-bottom: 10px;
-      padding: 20px;
     }
-    
-    #content {
-      height: 648px;
-    }
-    
-    .week {
-      height: 648px;
-      overflow: hidden;
-    }
-    
+        
     .day {
       background-color: #CCC;
-      float: left;
-      height: 648px;
-      margin-right: 0.3%;
-      padding: 5px;
-      width: 10.8%;
+      height: 300px;
     }
     
-    .current {
-      width: 28%
+    .day > p {
+      margin: 10px;
+    }
+        
+    ul.time_list {
+      list-style: none;
+      margin: 0 10px;
+    }
+    
+    ul.time_list li {
+      background-color: #FFF;
+      margin-bottom: 10px;
+      padding-left: 5px;
+    }
+    
+    ul.time_list li span {
+      border-left: 1px dashed #CCC;
+      display: block;
+      float: right;
+      text-align: center;
+      width: 30px;
     }
     
     .time_block {
       background-color: #FFF;
-      font-size: 0.75em;
-      margin: 1px 0;
+      margin: 1px 10px;
       padding: 3px;
     }
     
-    .hours_8 { height: 200px; }
-
 %body
-  %section#content
+  %section#masthead.container.container_4
+    .grid_4 Time Budget
     
-    %section#week
-      %section#sunday.day
+    .clear &nbsp;
+
+  %section#content
+    %section#week.container.container_4
+      %section#sunday.day.grid_1
         %p Sunday
         
-        %div.time_block.hours_8
-          Sleep - 8 hrs
-          
-        %div.time_block{:style => "height: 37.5px"}
-          Lunch - 1.5 hrs
-        
-        %div.time_block{:style => "height: 37.5px"}
-          Dinner - 1.5 hrs
+        %ul.time_list
+          %li
+            Sleep
+            %span 8
+          %li
+            Lunch
+            %span 1:30
+          %li
+            Dinner
+            %span 1:30
 
-      %section#monday.day
+      %section#monday.day.grid_1
         %p Monday
         
-        %div.time_block.hours_8
-          Sleep - 8 hrs
-          
-        %div.time_block.hours_8
-          Work - 8 hrs
-          
-        %div.time_block{:style => "height: 37.5px"}
-          Lunch - 1.5 hrs
+        %ul.time_list
+          %li
+            Sleep
+            %span 8
+          %li
+            Work
+            %span 8
+          %li
+            Lunch
+            %span 1:30
+          %li
+            Dinner
+            %span 1:30
 
-        %div.time_block{:style => "height: 37.5px"}
-          Dinner - 1.5 hrs
-
-      %section#tuesday.day
+      %section#tuesday.day.grid_1
         %p Tuesday
         
-        %div.time_block.hours_8
-          Sleep - 8 hrs
+        %ul.time_list
+          %li
+            Sleep
+            %span 8
+          %li
+            Work
+            %span 8
+          %li
+            Lunch
+            %span 1:30
+          %li
+            Dinner
+            %span 1:30
         
-        %div.time_block.hours_8
-          Work - 8 hrs
-        
-        %div.time_block{:style => "height: 37.5px"}
-          Lunch - 1.5 hrs
 
-        %div.time_block{:style => "height: 37.5px"}
-          Dinner - 1.5 hrs
-        
-
-      %section#wednesday.day
+      %section#wednesday.day.grid_1
         %p Wednesday
         
-        %div.time_block.hours_8
-          Sleep - 8 hrs
-        
-        %div.time_block.hours_8
-          Work - 8 hrs
+        %ul.time_list
+          %li
+            Sleep
+            %span 8
+          %li
+            Work
+            %span 8
+          %li
+            Lunch
+            %span 1:30
+          %li
+            Dinner
+            %span 1:30
           
-        %div.time_block{:style => "height: 37.5px"}
-          Lunch - 1.5 hrs
+      .clear{style: "margin-bottom: 4%;"} &nbsp;
 
-        %div.time_block{:style => "height: 37.5px"}
-          Dinner - 1.5 hrs
-
-      %section#thursday.day
+      %section#thursday.day.grid_1
         %p Thursday
         
-        %div.time_block.hours_8
-          Sleep - 8 hrs
-          
-        %div.time_block.hours_8
-          Work - 8 hrs
-          
-        %div.time_block{:style => "height: 37.5px"}
-          Lunch - 1.5 hrs
+        %ul.time_list
+          %li
+            Sleep
+            %span 8
+          %li
+            Work
+            %span 8
+          %li
+            Lunch
+            %span 1:30
+          %li
+            Dinner
+            %span 1:30
 
-        %div.time_block{:style => "height: 37.5px"}
-          Dinner - 1.5 hrs
-
-      %section#friday.day.current
+      %section#friday.day.grid_1
         %p Friday
         
-        %div.time_block.hours_8
-          Sleep - 8 hrs
-          
-        %div.time_block.hours_8
-          Work - 8 hrs
-          
-        %div.time_block{:style => "height: 37.5px"}
-          Lunch - 1.5 hrs
+        %ul.time_list
+          %li
+            Sleep
+            %span 8
+          %li
+            Work
+            %span 8
+          %li
+            Lunch
+            %span 1:30
+          %li
+            Dinner
+            %span 1:30
 
-        %div.time_block{:style => "height: 37.5px"}
-          Dinner - 1.5 hrs
-
-      %section#saturday.day
+      %section#saturday.day.grid_1
         %p Saturday
         
-        %div.time_block.hours_8
-          Sleep - 8 hrs
+        %ul.time_list
+          %li
+            Sleep
+            %span 8
+          %li
+            Fiddle 1
+            %span 1:20
+          %li
+            Lunch
+            %span 1:30
+          %li
+            Dinner
+            %span 1:30
           
-        %div.time_block{:style => "height: 32.5px"}
-          Fiddle 1 - 1.3 hours
-          
-        %div.time_block{:style => "height: 37.5px"}
-          Lunch - 1.5 hrs
-
-        %div.time_block{:style => "height: 37.5px"}
-          Dinner - 1.5 hrs
+      %section#something.grid_1
 
 </html>
