@@ -5,7 +5,7 @@ module TimeBudget
 
       def initialize(name, activities = [])
         @name = name
-        @activities = activities
+        @activities = activities.map { |a| ActivityPresenter.new(a) }
       end
     end
   end
