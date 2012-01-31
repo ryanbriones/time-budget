@@ -21,16 +21,13 @@
 
   %section#content
     %section.container.container_4
-      = haml :"budget/day", locals: {day: sunday}
-      = haml :"budget/day", locals: {day: monday}
-      = haml :"budget/day", locals: {day: tuesday}
-      = haml :"budget/day", locals: {day: wednesday}
+      - days[0..3].each do |day|
+        = haml :"budget/day", locals: {day: day}
       
       %div.clear{style: "margin-bottom: 4%"} &nbsp;
       
-      = haml :"budget/day", locals: {day: thursday}
-      = haml :"budget/day", locals: {day: friday}
-      = haml :"budget/day", locals: {day: saturday}
+      - days[4..6].each do |day|
+        = haml :"budget/day", locals: {day: day}
       
       %section#something.grid_1
       

@@ -1,8 +1,8 @@
 require_relative "../lib/time_budget/presenters/activity_presenter"
 
 describe TimeBudget::Presenters::ActivityPresenter do
-  it "delegates the name to the supplied activity" do
-    TimeBudget::Presenters::ActivityPresenter.new(stub(:name => "foo")).name.should == "foo"
+  it "delegates the title to the supplied activity" do
+    TimeBudget::Presenters::ActivityPresenter.new(stub(:title => "foo")).title.should == "foo"
   end
 
   describe "displaying hours and minutes format" do

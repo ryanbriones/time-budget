@@ -5,8 +5,8 @@ module TimeBudget
         @activity = activity
       end
 
-      def name
-        @activity.name
+      def title
+        @activity.title
       end
 
       def hours_and_minutes
