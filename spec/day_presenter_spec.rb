@@ -23,4 +23,16 @@ describe TimeBudget::Presenters::DayPresenter do
     day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
     day.activities.first.should be_instance_of(TimeBudget::Presenters::ActivityPresenter)
   end
+
+  it "has time available if the sum of the activities duration is less than the duration of a day" do
+    activity = stub("activity", :duration => 1)
+    day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
+    day.should have_time_available
+  end
+
+  it "displays the hours and minutes that are available" do
+    activity = stub("activity", :duration => 1)
+    day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
+    day.hours_and_minutes_available.should == "23:59"
+  end
 end

@@ -15,6 +15,19 @@ p, h1, h2, h3, h4, ul, li {
 .day > p {
   margin: 10px;
 }
+
+.day section.free, .day section.over {
+  background-color: #AAA;
+  bottom: 0;
+  padding: 3px 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.day section.over {
+  background-color: #FAA;
+}
     
 ul.time_list {
   list-style: none;

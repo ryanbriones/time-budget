@@ -9,6 +9,10 @@ module TimeBudget
         @activity.title
       end
 
+      def duration
+        @activity.duration
+      end
+
       def hours_and_minutes
         an_hour = 60*60
         number_of_hours = (@activity.duration/an_hour.to_f).floor
