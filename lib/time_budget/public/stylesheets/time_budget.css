@@ -33,6 +33,18 @@ p {
   font-weight: 400;
 }
 
+p.activity {
+  font-family: 'Gentium Book Basic', serif;
+  font-weight: 400;
+}
+
+p.activity span {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+}
+
 .day > p {
   color: #FAFAFA;
   font-size: 0.8em;
@@ -128,8 +140,7 @@ ul.time_list {
 }
 
 ul.time_list p {
-  height: 2em;
-  padding-top: 0.25em;
+  padding: 6px;
 }
 
 ul.time_list li {
