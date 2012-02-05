@@ -18,6 +18,14 @@ module TimeBudget
       def hours_and_minutes
         Decorators::HoursAndMinutesDecorator.new(duration).hours_and_minutes
       end
+
+      def hours
+        "%02d" % Decorators::HoursAndMinutesDecorator.new(duration).hours
+      end
+
+      def minutes
+        "%02d" % Decorators::HoursAndMinutesDecorator.new(duration).minutes
+      end
     end
   end
 end
