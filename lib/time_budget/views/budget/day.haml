@@ -4,12 +4,14 @@
   %ul.time_list
     - day.activities.each do |activity|
       %li
-        = activity.title
-        %span= activity.hours_and_minutes
+        %p.activity
+          = activity.title
+          %span= activity.hours_and_minutes
 
   %section{:class => (day.has_time_available? ? "free" : "over")}
     - if day.has_time_available?
-      = day.hours_and_minutes_available
-      Free
+      %p 
+        = day.hours_and_minutes_available
+        Free
     - else
-      Overbudget!
+      %p Overbudget!
