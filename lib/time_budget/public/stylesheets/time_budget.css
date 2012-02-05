@@ -127,12 +127,12 @@ body {
   border: 1px solid #b40e02;  
 }
     
-ul.time_list {
+ul.activities {
   list-style: none;
   margin: 0 10px;
 }
 
-ul.time_list li {
+ul.activities li {
   background-color: #FFF;
   border: 1px solid #EEE;
   margin-bottom: 10px;

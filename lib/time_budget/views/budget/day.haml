@@ -1,7 +1,7 @@
 %section.day.grid_1
   %p.weekday= day.name
   
-  %ul.time_list
+  %ul.activities
     - day.activities.each do |activity|
       %li.activity
         %span.title= activity.title
