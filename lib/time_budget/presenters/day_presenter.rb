@@ -25,6 +25,16 @@ module TimeBudget
 
         Decorators::HoursAndMinutesDecorator.new(available_duration).hours_and_minutes
       end
+
+      def hours_available
+        available_duration = DAY_DURATION - activities_duration
+        Decorators::HoursAndMinutesDecorator.new(available_duration).hours
+      end
+
+      def minutes_available
+        available_duration = DAY_DURATION - activities_duration
+        Decorators::HoursAndMinutesDecorator.new(available_duration).minutes
+      end
     end
   end
 end

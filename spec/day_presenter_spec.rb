@@ -30,9 +30,15 @@ describe TimeBudget::Presenters::DayPresenter do
     day.should have_time_available
   end
 
-  it "displays the hours and minutes that are available" do
+  it "displays the hours that are available" do
     activity = stub("activity", duration: 1)
     day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
-    day.hours_and_minutes_available.should == "23:59"
+    day.hours_available.should == 23
+  end
+
+  it "displays the minutes that are available" do
+    activity = stub("activity", duration: 1)
+    day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
+    day.minutes_available.should == 59
   end
 end

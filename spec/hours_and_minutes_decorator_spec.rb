@@ -14,4 +14,14 @@ describe TimeBudget::Decorators::HoursAndMinutesDecorator do
       TimeBudget::Decorators::HoursAndMinutesDecorator.new(60*30).hours_and_minutes.should == ":30"
     end
   end
+
+  it "displays the hours converted from the supplied duration" do
+    hours = 8
+    TimeBudget::Decorators::HoursAndMinutesDecorator.new(60*60*hours).hours.should == hours
+  end
+
+  it "displays the minutes converted from the supplied duration" do
+    minutes = 30
+    TimeBudget::Decorators::HoursAndMinutesDecorator.new(60*minutes).minutes.should == minutes
+  end
 end

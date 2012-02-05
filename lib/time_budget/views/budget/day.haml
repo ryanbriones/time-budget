@@ -11,8 +11,8 @@
   %section{:class => (day.has_time_available? ? "free" : "over")}
     - if day.has_time_available?
       %p.time_pill
-        %span.hours 08
-        %span.minutes 30
+        %span.hours= day.hours_available
+        %span.minutes= day.minutes_available
           
     - else
       %p Overbudget!
