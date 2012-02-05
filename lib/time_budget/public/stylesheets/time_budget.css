@@ -33,16 +33,9 @@ p {
   font-weight: 400;
 }
 
-p.activity {
+.activity {
   font-family: 'Gentium Book Basic', serif;
   font-weight: 400;
-}
-
-p.activity span {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-size: 0.8em;
-  letter-spacing: 2px;
 }
 
 .day > p {
@@ -54,10 +47,10 @@ p.activity span {
   text-transform: uppercase;
 }
 
-.day section.free p {
+.day section.free p,
+.activity p.time_pill {
   font-size: 0.8em;
   letter-spacing: 2px;
-  height: 1.5em;
   padding-top: 3px;
   text-transform: uppercase;
 }
@@ -139,25 +132,13 @@ ul.time_list {
   margin: 0 10px;
 }
 
-ul.time_list p {
-  padding: 6px;
-}
-
 ul.time_list li {
   background-color: #FFF;
   border: 1px solid #EEE;
   margin-bottom: 10px;
-  padding-left: 5px;
-  height: 2em;
-}
-
-ul.time_list li span {
-  border-left: 1px dashed #EEE;
-  display: block;
-  float: right;
-  text-align: center;
-  width: 3em;
-  height: 2em;  
+  overflow: hidden;
+  padding: 4px;
+  position: relative;
 }
 
 .time_block {
@@ -166,7 +147,7 @@ ul.time_list li span {
   padding: 3px;
 }
 
-section.free p.time_pill {
+p.time_pill {
   background-color: #FFF;
   border: 1px solid #DDD;
   -webkit-border-radius: 12px;
@@ -181,4 +162,16 @@ section.free p.time_pill {
 span.hours {
   border-right: 1px dashed #CCC;
   padding: 2px;
+}
+
+.activity .time_pill {
+  float: right;
+  position: relative;
+  text-align: center;
+  top: 1px;
+}
+
+.activity span.title { 
+  float: left;
+  line-height: 1.5em;
 }
