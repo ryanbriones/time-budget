@@ -60,6 +60,10 @@ section.over p {
   text-transform: uppercase;
 }
 
+span.hours, span.minutes {
+  font-weight: 400;
+}
+
 /* - - - 2. S T R U C T U R E - - - */
 
 body {
@@ -82,10 +86,13 @@ body {
   border-right: 1px solid rgba(204, 204, 204, 0.4);  
   height: 280px;
   -webkit-box-shadow: 0px 1px 4px #EEE;
+  -moz-box-shadow: 0px 1px 4px #EEE;
+  -o-box-shadow: 0px 1px 4px #EEE;
+  box-shadow: 0px 1px 4px #EEE;
   min-width: 203px;
 }
 
-.day > p {
+.day .weekday {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAPklEQVQYGWN8JMjwn4EAYCIgz/D+LwMDXkUgBYLMBBSBFIAAVpNAJiADDEUwK/AqglmBVRG6FRiKsFmBrAgAY2IN8JTefwoAAAAASUVORK5CYII=) repeat;
   background-color: #E21100;
   border: 1px solid #b40e02;
@@ -146,4 +153,21 @@ ul.time_list li span {
   background-color: #FFF;
   margin: 1px 10px;
   padding: 3px;
+}
+
+section.free p.time_pill {
+  background-color: #FFF;
+  border: 1px solid #DDD;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  display: inline-block;
+  height: 1.333em;
+  width: 4.4em;
+}
+
+span.hours {
+  border-right: 1px dashed #CCC;
+  padding: 2px;
 }

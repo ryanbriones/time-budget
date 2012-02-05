@@ -1,5 +1,5 @@
 %section.day.grid_1
-  %p= day.name
+  %p.weekday= day.name
   
   %ul.time_list
     - day.activities.each do |activity|
@@ -10,8 +10,9 @@
 
   %section{:class => (day.has_time_available? ? "free" : "over")}
     - if day.has_time_available?
-      %p 
-        = day.hours_and_minutes_available
-        Free
+      %p.time_pill
+        %span.hours 08
+        %span.minutes 30
+          
     - else
       %p Overbudget!
