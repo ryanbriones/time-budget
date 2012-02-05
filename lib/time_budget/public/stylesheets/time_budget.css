@@ -17,9 +17,10 @@ p, h1, h2, h3, h4, ul, li {
 }
 
 h1 {
+  color: #444;
+  display: inline-block;
   font-size: 1.4em;
   font-weight: 400;
-  color: #444;
 }
 
 h2 {
@@ -68,6 +69,22 @@ section.over p {
 
 span.hours, span.minutes {
   font-weight: 400;
+}
+
+select, input, button {
+  color: #555;
+  font-family: 'Gentium Book Basic', serif;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+input::-webkit-input-placeholder {
+  color: #555 !important;  
+}
+
+button {
+  color: #FFF;
+  font-family: 'Lato', sans-serif;
 }
 
 /* - - - 2. S T R U C T U R E - - - */
@@ -175,4 +192,56 @@ span.hours {
 .activity span.title { 
   float: left;
   line-height: 1.5em;
+}
+
+
+/* - - - F O R M - - - */
+
+.grid_4 p { 
+  height: auto;
+}
+
+form {
+  float: right;
+  position: absolute;
+  top: -0.1em;
+  right: 5em;
+}
+
+input, select {
+  
+}
+
+button { 
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAPklEQVQYGWN8JMjwn4EAYCIgz/D+LwMDXkUgBYLMBBSBFIAAVpNAJiADDEUwK/AqglmBVRG6FRiKsFmBrAgAY2IN8JTefwoAAAAASUVORK5CYII=) repeat;
+  border: 1px solid #b40e02;
+  cursor: pointer;
+  padding: 3px 5px 5px 5px;
+  width: 5em;
+}
+
+button:hover { 
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAP0lEQVQYGWPcwsf0n4EAYCIgz/D0PyMDXkUgBdKM//ErAikAAawmgUxABhiKYFbgVQSzAqsidCswFGGzAlkRALKYErqj4YCeAAAAAElFTkSuQmCC) repeat;
+  border: 1px solid #940d03;
+}
+
+input.activity {
+  border: 1px solid #DDD;
+  margin-right: 0.5em;
+  padding: 5px;
+}
+
+input.duration {
+  width: 1.8em;
+  border: 1px solid #DDD;
+  padding: 5px;
+  text-align: center;
+}
+
+select {
+  background-color: white;  
+  border: 1px solid #DDD;
+  border-image: none;
+  height: 2em;
+  margin: 0 0.5em;
 }

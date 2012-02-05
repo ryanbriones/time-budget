@@ -19,7 +19,25 @@
   %section#masthead.container.container_4
     .grid_4 
       %h1 Time Budget
-    
+      %form
+        %p
+          %label 
+            %input{:name => "activity", :type => "text", :placeholder => "Activity", :class => "activity"}          
+          %input{:name => "hours", :type => "text", :placeholder => "HH", :class => "duration"}
+            %span :
+          %input{:name => "minutes", :type => "text", :placeholder => "MM", :class => "duration"}
+          %select
+            %option Sunday
+            %option Monday
+            %option Tuesday
+            %option Wednesday
+            %option Thursday
+            %option Friday
+            %option Saturday
+            %option Every Day
+            %option Weekdays
+            %option Weekends
+          %button Add 
     .clear &nbsp;
 
   %section#content
