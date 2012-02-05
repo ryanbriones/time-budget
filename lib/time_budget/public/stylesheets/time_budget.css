@@ -1,6 +1,14 @@
-body {
-  margin-bottom: 5em;
-}
+/* Time Budget
+ *
+ * T A B L E  O F  C O N T E N T S 
+ *
+ * 1. Typography
+ * 2. Structure
+ *
+ * 
+ */
+
+/* - - - 1. T Y P O G R A P H Y - - - */
 
 p, h1, h2, h3, h4, ul, li {
   font-family: 'Lato', sans-serif;
@@ -25,8 +33,37 @@ p {
   font-weight: 400;
 }
 
-section.container { 
- 
+.day > p {
+  color: #FAFAFA;
+  font-size: 0.8em;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-align: center;  
+  text-transform: uppercase;
+}
+
+.day section.free p {
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  height: 1.5em;
+  padding-top: 3px;
+  text-transform: uppercase;
+}
+
+section.over p {
+  color: #FFF;
+  display: block;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  height: 1.5em;
+  padding-top: 3px;
+  text-transform: uppercase;
+}
+
+/* - - - 2. S T R U C T U R E - - - */
+
+body {
+  margin-bottom: 5em;
 }
 
 #masthead {
@@ -52,16 +89,9 @@ section.container {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAPklEQVQYGWN8JMjwn4EAYCIgz/D+LwMDXkUgBYLMBBSBFIAAVpNAJiADDEUwK/AqglmBVRG6FRiKsFmBrAgAY2IN8JTefwoAAAAASUVORK5CYII=) repeat;
   background-color: #E21100;
   border: 1px solid #b40e02;
-  color: #FAFAFA;
   height: 1.5em;
   margin: 0 auto 10px auto;
-  text-transform: uppercase;
   padding: 2px 0;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.8em;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-align: center;
   width: 6em;  
 }
 
@@ -79,28 +109,10 @@ section.container {
   border: 1px solid #DDD;
 }
 
-.day section.free p {
-  font-size: 0.8em;
-  letter-spacing: 2px;
-  height: 1.5em;
-  padding-top: 3px;
-  text-transform: uppercase;
-}
-
 .day section.over {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAPklEQVQYGWN8JMjwn4EAYCIgz/D+LwMDXkUgBYLMBBSBFIAAVpNAJiADDEUwK/AqglmBVRG6FRiKsFmBrAgAY2IN8JTefwoAAAAASUVORK5CYII=) repeat;
   background-color: #E21100;
   border: 1px solid #b40e02;  
-}
-
-section.over p {
-  color: #FFF;
-  display: block;
-  font-size: 0.8em;
-  letter-spacing: 2px;
-  height: 1.5em;
-  padding-top: 3px;
-  text-transform: uppercase;
 }
     
 ul.time_list {
