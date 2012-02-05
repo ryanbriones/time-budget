@@ -17,8 +17,9 @@ p, h1, h2, h3, h4, ul, li {
 }
 
 h1 {
-  font-size: 2.4em;
-  font-weight: 100;
+  font-size: 1.4em;
+  font-weight: 400;
+  color: #444;
 }
 
 h2 {
