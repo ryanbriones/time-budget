@@ -28,12 +28,12 @@ module TimeBudget
 
       def hours_available
         available_duration = DAY_DURATION - activities_duration
-        Decorators::HoursAndMinutesDecorator.new(available_duration).hours
+        "%02d" % Decorators::HoursAndMinutesDecorator.new(available_duration).hours
       end
 
       def minutes_available
         available_duration = DAY_DURATION - activities_duration
-        Decorators::HoursAndMinutesDecorator.new(available_duration).minutes
+        "%02d" % Decorators::HoursAndMinutesDecorator.new(available_duration).minutes
       end
     end
   end

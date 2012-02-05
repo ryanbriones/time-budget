@@ -30,15 +30,29 @@ describe TimeBudget::Presenters::DayPresenter do
     day.should have_time_available
   end
 
-  it "displays the hours that are available" do
-    activity = stub("activity", duration: 1)
-    day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
-    day.hours_available.should == 23
-  end
+  context "when displaying the hours available" do
+    it "displays the hours that are available" do
+      activity = stub("activity", duration: 1)
+      day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
+      day.hours_available.should == "23"
+    end
 
-  it "displays the minutes that are available" do
-    activity = stub("activity", duration: 1)
-    day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
-    day.minutes_available.should == 59
+    it "pads the hours with one zero if the value is a single digit" do
+      activity = stub("activity", duration: 60*60*15)
+      day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
+      day.hours_available.should == "09"
+    end
+
+    it "displays the minutes that are available" do
+      activity = stub("activity", duration: 1)
+      day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
+      day.minutes_available.should == "59"
+    end
+
+    it "pads the minutes with one zero if the value is a single digit" do
+      activity = stub("activity", duration: 60*53)
+      day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
+      day.minutes_available.should == "07"
+    end
   end
 end
