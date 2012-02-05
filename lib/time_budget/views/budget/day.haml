@@ -5,14 +5,9 @@
     - day.activities.each do |activity|
       %li.activity
         %span.title= activity.title
-        %p.time_pill
-          %span.hours 08
-          %span.minutes 20
+        = haml :"budget/time_pill", locals: {hours: "08", minutes: "20"}
   %section{:class => (day.has_time_available? ? "free" : "over")}
     - if day.has_time_available?
-      %p.time_pill
-        %span.hours= day.hours_available
-        %span.minutes= day.minutes_available
-          
+      = haml :"budget/time_pill", locals: {hours: day.hours_available, minutes: day.minutes_available}
     - else
       %p Overbudget!
