@@ -5,14 +5,9 @@ module TimeBudget
     end
 
     get("/") do
-      days = []
-      (0..7).each do |day_number|
-        day_name = Date::ABBR_DAYNAMES[day_number]
-        activities = DB[:activities].filter(day: day_number).all.map do |activity_data|
-          OpenStruct.new(activity_data)
-        end
-        
-        days << Presenters::DayPresenter.new(day_name, activities)
+      days = (0..7).map_into(Date::ABBR_DAYNAMES).zip((0..7)).map do |day_name, day_number|
+        activities = DB[:activities].filter(day: day_number).all.map_to(OpenStruct)
+        Presenters::Day.new(day_name, activities)
       end
       
       haml :"budget/show", locals: {days: days}
