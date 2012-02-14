@@ -2,7 +2,7 @@ require "time_budget/decorators/hours_and_minutes"
 
 module TimeBudget
   module Presenters
-    class ActivityPresenter
+    class Activity
       def initialize(activity)
         @activity = activity
       end

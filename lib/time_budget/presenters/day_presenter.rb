@@ -9,7 +9,7 @@ module TimeBudget
 
       def initialize(name, activities = [])
         @name = name
-        @activities = activities.map { |a| ActivityPresenter.new(a) }
+        @activities = activities.map { |a| Activity.new(a) }
       end
 
       def has_time_available?

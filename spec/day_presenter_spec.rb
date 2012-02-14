@@ -1,5 +1,5 @@
 require_relative "../lib/time_budget/presenters/day_presenter"
-require_relative "../lib/time_budget/presenters/activity_presenter"
+require_relative "../lib/time_budget/presenters/activity"
 
 describe TimeBudget::Presenters::DayPresenter do
   it "displays the name of the day" do
@@ -18,10 +18,10 @@ describe TimeBudget::Presenters::DayPresenter do
     day.activities.should == []
   end
 
-  it "activities are wrapped in ActivityPresenters" do
+  it "activities are wrapped in Activitys" do
     activity = stub("activity")
     day = TimeBudget::Presenters::DayPresenter.new("Sunday", [activity])
-    day.activities.first.should be_instance_of(TimeBudget::Presenters::ActivityPresenter)
+    day.activities.first.should be_instance_of(TimeBudget::Presenters::Activity)
   end
 
   it "has time available if the sum of the activities duration is less than the duration of a day" do
