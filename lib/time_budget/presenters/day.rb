@@ -2,7 +2,7 @@ require "time_budget/decorators/hours_and_minutes"
 
 module TimeBudget
   module Presenters
-    class DayPresenter
+    class Day
       DAY_DURATION = 60*60*24
 
       attr_reader :name, :activities
