@@ -1,19 +1,18 @@
 module Enumerable
   def map_into(into = nil)
-    return self unless into
-    raise ArgumentError, "argument must respond to []" unless into.respond_to?(:[])
-
-    map do |element|
-      into[element]
-    end
+    do_map into, :[]
   end
 
   def map_to(to = nil)
-    return self unless to
-    raise ArgumentError, "argument must respond to new" unless to.respond_to?(:new)
-
+    do_map to, :new
+  end
+  
+private
+  def do_map(obj, method)
+    return self unless obj
+    raise ArgumentError, "argument must respond to #{method}" unless obj.respond_to?(method)
     map do |element|
-      to.new(element)
+      obj.send(method, element)
     end
   end
 end
