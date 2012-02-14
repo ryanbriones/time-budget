@@ -26,6 +26,10 @@ module TimeBudget
       def minutes
         "%02d" % Decorators::HoursAndMinutes.new(duration).minutes
       end
+
+      def self.for_day(day_number)
+        Models::Activity.for_day(day_number).map_to(self)
+      end
     end
   end
 end

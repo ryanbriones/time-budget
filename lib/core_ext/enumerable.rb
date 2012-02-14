@@ -11,8 +11,6 @@ private
   def do_map(obj, method)
     return self unless obj
     raise ArgumentError, "argument must respond to #{method}" unless obj.respond_to?(method)
-    map do |element|
-      obj.send(method, element)
-    end
+    map &obj.method(method)
   end
 end

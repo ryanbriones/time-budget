@@ -30,4 +30,18 @@ describe TimeBudget::Presenters::Activity do
       TimeBudget::Presenters::Activity.new(stub("activity", duration: (60*60*12)+(60*2))).minutes.should == "02"
     end
   end
+
+  context "collecting activities for a day" do
+    let(:activities) { [stub(duration: 60*60), stub(duration: 60*60*2)] }
+
+    before(:each) do
+      TimeBudget::Models::Activity.stub(:for_day).and_return(activities)
+    end
+
+    it "converts the activity models into presenters" do
+      activities = TimeBudget::Presenters::Activity.for_day(5)
+      activities.first.hours.should == "01"
+      activities.last.hours.should == "02"
+    end
+  end
 end
