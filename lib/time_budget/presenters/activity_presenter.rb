@@ -1,4 +1,4 @@
-require "time_budget/decorators/hours_and_minutes_decorator"
+require "time_budget/decorators/hours_and_minutes"
 
 module TimeBudget
   module Presenters
@@ -16,15 +16,15 @@ module TimeBudget
       end
 
       def hours_and_minutes
-        Decorators::HoursAndMinutesDecorator.new(duration).hours_and_minutes
+        Decorators::HoursAndMinutes.new(duration).hours_and_minutes
       end
 
       def hours
-        "%02d" % Decorators::HoursAndMinutesDecorator.new(duration).hours
+        "%02d" % Decorators::HoursAndMinutes.new(duration).hours
       end
 
       def minutes
-        "%02d" % Decorators::HoursAndMinutesDecorator.new(duration).minutes
+        "%02d" % Decorators::HoursAndMinutes.new(duration).minutes
       end
     end
   end

@@ -1,4 +1,4 @@
-require "time_budget/decorators/hours_and_minutes_decorator"
+require "time_budget/decorators/hours_and_minutes"
 
 module TimeBudget
   module Presenters
@@ -23,17 +23,17 @@ module TimeBudget
       def hours_and_minutes_available
         available_duration = DAY_DURATION - activities_duration
 
-        Decorators::HoursAndMinutesDecorator.new(available_duration).hours_and_minutes
+        Decorators::HoursAndMinutes.new(available_duration).hours_and_minutes
       end
 
       def hours_available
         available_duration = DAY_DURATION - activities_duration
-        "%02d" % Decorators::HoursAndMinutesDecorator.new(available_duration).hours
+        "%02d" % Decorators::HoursAndMinutes.new(available_duration).hours
       end
 
       def minutes_available
         available_duration = DAY_DURATION - activities_duration
-        "%02d" % Decorators::HoursAndMinutesDecorator.new(available_duration).minutes
+        "%02d" % Decorators::HoursAndMinutes.new(available_duration).minutes
       end
     end
   end

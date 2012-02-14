@@ -2,7 +2,7 @@ require "delegate"
 
 module TimeBudget
   module Decorators
-    class HoursAndMinutesDecorator < SimpleDelegator
+    class HoursAndMinutes < SimpleDelegator
       ONE_HOUR_IN_SECONDS = 60*60
 
       def hours_and_minutes
