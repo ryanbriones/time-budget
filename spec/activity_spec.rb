@@ -1,4 +1,6 @@
-require_relative "../lib/time_budget/presenters/activity"
+require "spec_helper"
+require "time_budget/presenters/activity"
+require "time_budget/models/activity"
 
 describe TimeBudget::Presenters::Activity do
   it "delegates the title to the supplied activity" do

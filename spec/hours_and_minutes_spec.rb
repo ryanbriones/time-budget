@@ -1,4 +1,4 @@
-require_relative "../lib/time_budget/decorators/hours_and_minutes"
+require "time_budget/decorators/hours_and_minutes"
 
 describe TimeBudget::Decorators::HoursAndMinutes do
   describe "displaying hours and minutes format" do

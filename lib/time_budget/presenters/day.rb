@@ -1,5 +1,4 @@
 require "time_budget/decorators/hours_and_minutes"
-require "core_ext/enumerable"
 require "date"
 
 module TimeBudget
